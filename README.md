@@ -1,13 +1,12 @@
-<img src="C:\Users\张思源\Pictures\壁纸\校徽（蓝）.jpg" style="zoom:15%;" /><font size=5>**MusicPlayer项目说明文档**</font>
+#**MusicPlayer项目说明文档**
 
 > 同济大学2019级软件学院数据结构课荣誉班项目
 
 
 
-<font size = 6>**目录（可跳转）** </font>
+## **目录（可跳转）**
 
-[TOC]
-
+[TOC] 
 
 
 # 项目信息
@@ -76,7 +75,7 @@
 
 ## 2.1 类继承关系
 
-<img src="C:\Users\张思源\Desktop\Readme插图\类继承关系(1).png" alt="类继承关系(1)" style="zoom:80%;" />
+file:///C:/Users/%E5%BC%A0%E6%80%9D%E6%BA%90/Desktop/Readme%E6%8F%92%E5%9B%BE/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png
 
 ​		其中，灰色边框的类是Qt提供的可继承的类，紫色边框的为本项目从原有类中派生出来的类，详细的接口、成员与功能在2.2阐述。
 
