@@ -66,12 +66,9 @@
 
 + MainWidget 类
 
-  
 
-### 2.1 类继承关系
-![image](https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png)  
+![Gant](http://r.photo.store.qq.com/psc?/V10CyMEv2paJzi/55aGSGZ20hc8Ink30l70cEF3jMCtMCH4qTt5ZTGVee6*.woSnKGW6UUUqvvTFfU9WxQsc8prmZ8Xtxxdq7910BRRNiFcBeQcbvTnpFgcX*Y!/r)
 
-https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png
 
 ​		其中，灰色边框的类是Qt提供的可继承的类，紫色边框的为本项目从原有类中派生出来的类，详细的接口、成员与功能在2.2阐述。
 
