@@ -67,7 +67,7 @@
 + MainWidget 类
 
 
-![Gant](http://r.photo.store.qq.com/psc?/V54aNf8J2qH4tD1U6Dqy1p0GVH3g3T8i/TmEUgtj9EK6.7V8ajmQrEOqd6GBLcJHPMAvYQwcTzcR7KwTnpnnIxXrJvvaJLWav8VdH8WxhNeZhBdSNjQ8LWpc1j8oAE15tbkL4AVMCoO8!/r)
+![Gant](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/image/background/default.jpg)
 
 
 ​		其中，灰色边框的类是Qt提供的可继承的类，紫色边框的为本项目从原有类中派生出来的类，详细的接口、成员与功能在2.2阐述。
