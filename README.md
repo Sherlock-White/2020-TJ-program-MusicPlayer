@@ -12,7 +12,7 @@
 
 + **小组成员：1951576    沈星宇**
 
-  ​        **1953288    张思源**
+  ​            **1953288    张思源**
 
 + **贡献比例：沈星宇：100%**
 
@@ -69,7 +69,7 @@
   
 
 ### 2.1 类继承关系
-![](http://m.qpic.cn/psc?/V54aNf8J2qH4tD1U6Dqy1p0GVH3g3T8i/bqQfVz5yrrGYSXMvKr.cqTtutctT1lYWGM*YQZ12J5vHhJIBf7ooKAdl65U5NsN8ZNWiJYX5k*6NsX0u.gVe3pWLbqJr8bdu1WwXbCRiqh4!/b&bo=kAJTAZACUwEDCSw!&rf=viewer_4&t=5)  
+![](https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png)  
 
 
 
