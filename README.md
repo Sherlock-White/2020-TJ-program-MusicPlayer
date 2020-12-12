@@ -69,9 +69,9 @@
   
 
 ### 2.1 类继承关系
-![](res_readme/类继承关系(1).png)  
+![image](https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png)  
 
-
+https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png
 
 ​		其中，灰色边框的类是Qt提供的可继承的类，紫色边框的为本项目从原有类中派生出来的类，详细的接口、成员与功能在2.2阐述。
 
