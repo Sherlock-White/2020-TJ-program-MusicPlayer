@@ -69,7 +69,7 @@
   
 
 ### 2.1 类继承关系
-![](https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB(1).png)  
+![](res_readme/类继承关系(1).png)  
 
 
 
