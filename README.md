@@ -67,7 +67,7 @@
 + MainWidget 类
 
 
-![Gant](http://r.photo.store.qq.com/psc?/V10CyMEv2paJzi/55aGSGZ20hc8Ink30l70cEF3jMCtMCH4qTt5ZTGVee6*.woSnKGW6UUUqvvTFfU9WxQsc8prmZ8Xtxxdq7910BRRNiFcBeQcbvTnpFgcX*Y!/r)
+![Gant](http://r.photo.store.qq.com/psc?/V54aNf8J2qH4tD1U6Dqy1p0GVH3g3T8i/TmEUgtj9EK6.7V8ajmQrEOqd6GBLcJHPMAvYQwcTzcR7KwTnpnnIxXrJvvaJLWav8VdH8WxhNeZhBdSNjQ8LWpc1j8oAE15tbkL4AVMCoO8!/r)
 
 
 ​		其中，灰色边框的类是Qt提供的可继承的类，紫色边框的为本项目从原有类中派生出来的类，详细的接口、成员与功能在2.2阐述。
