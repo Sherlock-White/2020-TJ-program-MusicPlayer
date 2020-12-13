@@ -735,14 +735,14 @@ void MainWidget::on_btnPlayMode_clicked()
     else if(playlist->playbackMode()==QMediaPlaylist::Random){
         ui->btnPlayMode->setStyleSheet(LoopOneStyle());
         ui->btnPlayMode->setToolTip(u8"单曲循环");
-        action_systemTray_playmode->setIcon(QIcon(":/image/image/image/loop-one2.png"));
+        action_systemTray_playmode->setIcon(QIcon(":/image/image/image/loop-one.png"));
         action_systemTray_playmode->setText(u8"单曲循环");
         playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
     }
     else if(playlist->playbackMode()==QMediaPlaylist::CurrentItemInLoop){
         ui->btnPlayMode->setStyleSheet(LoopStyle());
         ui->btnPlayMode->setToolTip(u8"循环播放");
-        action_systemTray_playmode->setIcon(QIcon(":/image/image/image/loop2.png"));
+        action_systemTray_playmode->setIcon(QIcon(":/image/image/image/loop.png"));
         action_systemTray_playmode->setText(u8"循环播放");
         playlist->setPlaybackMode(QMediaPlaylist::Loop);
     }

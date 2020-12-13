@@ -53,41 +53,45 @@ border-image: url(:/image/image/background/default.jpg);
     </property>
     <item>
      <widget class="QPushButton" name="btnPlayMode">
-      <property name="font">
-       <font>
-        <family>Microsoft YaHei UI</family>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+      <property name="minimumSize">
+       <size>
+        <width>35</width>
+        <height>35</height>
+       </size>
       </property>
       <property name="cursor">
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="toolTip">
-       <string>添加本地音乐</string>
+       <string>循环播放</string>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton
+{
+background-image: url(:/image/image/image/loop.png);
+background-repeat:no-repeat;
+background-position:center center;
+border:none;
+}
+
+QPushButton:hover{
+background-image: url(:/image/image/image-hover/loop-hover.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+QPushButton:pressed{
+background-image: url(:/image/image/image/loop.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+</string>
       </property>
       <property name="text">
        <string/>
       </property>
-      <property name="icon">
-       <iconset resource="imagefile.qrc">
-        <normaloff>:/image/image/image/play-random.png</normaloff>:/image/image/image/play-random.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>80</width>
-        <height>80</height>
-       </size>
-      </property>
-      <property name="shortcut">
-       <string>Ctrl+O</string>
-      </property>
       <property name="flat">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
      </widget>
     </item>
@@ -299,6 +303,9 @@ background-position:center center;
         <width>60</width>
         <height>60</height>
        </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
       <property name="flat">
        <bool>true</bool>
@@ -816,7 +823,7 @@ color:rgb(255, 255, 255);
     <number>5</number>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="page_0">
     <widget class="MusicListWidget" name="playListWidget">
@@ -1217,7 +1224,7 @@ background-color: rgba(255, 255, 255, 50);
      </property>
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>40</x>
        <y>0</y>
        <width>71</width>
        <height>41</height>
@@ -1288,7 +1295,7 @@ background-color: rgba(255, 255, 255, 50);
     <widget class="QPushButton" name="btnAddtoFavor">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>0</x>
        <y>0</y>
        <width>35</width>
        <height>41</height>
@@ -1579,7 +1586,7 @@ background-color: rgba(255, 255, 255, 50);
      </property>
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>50</x>
        <y>0</y>
        <width>51</width>
        <height>41</height>
@@ -1608,7 +1615,7 @@ background-color: rgba(255, 255, 255, 50);
     <widget class="QPushButton" name="btnAddtoMusicList">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>10</x>
        <y>0</y>
        <width>35</width>
        <height>41</height>
@@ -2293,7 +2300,7 @@ background-position:center center;
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>271</width>
+     <width>299</width>
      <height>41</height>
     </rect>
    </property>
@@ -2336,19 +2343,6 @@ background-position:center center;
      </widget>
     </item>
     <item>
-     <spacer name="horizontalSpacer_6">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
      <widget class="QLabel" name="titleLabel">
       <property name="enabled">
        <bool>true</bool>
@@ -2373,6 +2367,19 @@ background-position:center center;
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>
