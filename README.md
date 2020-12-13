@@ -87,104 +87,23 @@
 
 > 用来储存歌曲的信息，包含数据库的存取和歌曲解析两大功能
 
-<img src="C:\Users\张思源\Desktop\res_readme\Music类 (1).png" style="zoom: 35%;" /> <img src="C:\Users\张思源\Desktop\res_readme\code_MusicClass.jpg" style="zoom: 35%;" />
-
-
-
-
-
 ##### **2.2.2 MusicList 类（歌单类）**
 
 > 歌曲列表（即歌单），是用容器vector将music类的对象存储起来，由此可以进行一些具体的、针对多首歌曲的操作
-
-<img src="C:\Users\张思源\Desktop\res_readme\MusicList类.png" alt="MusicList类" style="zoom: 33%;" />  <img src="C:\Users\张思源\Desktop\res_readme\code_MusicListClass.jpg" style="zoom: 33%;" />
-
-
-
-
 
 ##### **2.2.3 MusicListWidget 类（歌单窗口）**
 
 > 用来展示歌单（其实还包括”播放列表“和”本地音乐“），主要是将歌单能实现的功能与窗口上的按钮建立信号槽
 
-<img src="C:\Users\张思源\Desktop\res_readme\MusicListWidget类.png" alt="MusicListWidget类" style="zoom: 33%;" /> <img src="C:\Users\张思源\Desktop\res_readme\code_MusicListWidgetClass.jpg" style="zoom: 33%;" />
-
-
-
-
-
 ##### **2.2.4 MusicListDialog 类（”添加至歌单“时弹出的对话框）**
 
 > 歌单的创立需要用户自行选择歌曲加入歌单，此时将弹出一个窗口，供用户从”本地音乐“中选取一个或多个歌曲进入对应的歌单
-
-<img src="C:\Users\张思源\Desktop\res_readme\MusicListDialog类.png" alt="MusicListDialog类" style="zoom: 33%;" />   <img src="C:\Users\张思源\Desktop\res_readme\code_MusicListWidgetClass.jpg" style="zoom: 33%;" />
-
-
-
 
 
 ##### **2.2.5 LyricWidget  类（歌词显示的窗口）**
 
 > 用来专门显示歌词的窗口，嵌入至主页面中，点击”下一曲“旁边标注有”词“的按钮即可召唤此窗口，建立在”单条歌词（LyricLine类）“的基础上
 
-<img src="C:\Users\张思源\Desktop\res_readme\LyricWidget类.png" alt="LyricWidget类" style="zoom: 33%;" /> <img src="C:\Users\张思源\Desktop\res_readme\code_LyricWidgetClass.jpg" style="zoom: 33%;" />
-
-
-
-
-
 ##### **2.2.6 MainWidget  类（主窗口）**
 
 > 负责整个播放器各模块的协调与关联，以及承接主页面上各种按钮对应的信号槽，以此实现对应的功能
-
-
-
-
-
-
-
-### 3 界面设计
-
-#### 3.1 主页面
-
-<img src="C:\Users\张思源\AppData\Roaming\Typora\typora-user-images\image-20201213172007835.png" alt="image-20201213172007835" style="zoom:50%;" /> 
-
-
-
-#### 3.2 歌词界面
-
-
-
-
-
-
-
-#### 3.3 ”添加音乐至歌单“界面
-
-<img src="C:\Users\张思源\AppData\Roaming\Typora\typora-user-images\image-20201213175452264.png" alt="image-20201213175452264" style="zoom:50%;" /> 
-
-
-
-### **4 功能实现简述**
-
-
-
-### **5 亮点和小结**
-
-
-
-#### 5.1 代码亮点简述
-
-**以下简述一下本项目的一些亮点（仅代表小组两人观点）：**
-
-1. ……
-2. ……
-3. ……
-4. 
-
-
-
-
-#### 5.2 项目小结/心得
-
-​	
