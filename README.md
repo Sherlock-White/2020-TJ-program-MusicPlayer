@@ -12,10 +12,12 @@
 
 + **小组成员：**
 **1951576   沈星宇**
+
 **1953288   张思源**
 
 + **贡献比例：**
 **沈星宇：100%**
+
 **张思源：100%**
 
 + **项目github地址：**
@@ -87,7 +89,7 @@
 
 > 用来储存歌曲的信息，包含数据库的存取和歌曲解析两大功能
 
-![Music类示意图](https://github.com/Sherlock-White/2020-TJ-program-MusicPlayer/blob/main/res_readme/Music%E7%B1%BB%20(1).png)
+![Music类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/Music%E7%B1%BB%20(1).png)
 ![Music类类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicClass.jpg)
 
 
@@ -96,7 +98,8 @@
 
 > 歌曲列表（即歌单），是用容器vector将music类的对象存储起来，由此可以进行一些具体的、针对多首歌曲的操作
 
-![MusicList类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicList%E7%B1%BB.png)![MusicList类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListClass.jpg)
+![MusicList类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicList%E7%B1%BB.png)
+![MusicList类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListClass.jpg)
 
 
 
@@ -105,7 +108,8 @@
 
 > 用来展示歌单（其实还包括”播放列表“和”本地音乐“），主要是将歌单能实现的功能与窗口上的按钮建立信号槽
 
-![MusicListWidget类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicList%E7%B1%BB.png)![MusicListWidget类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListWidgetClass.jpg)
+![MusicListWidget类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicList%E7%B1%BB.png)
+![MusicListWidget类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListWidgetClass.jpg)
 
 
 
@@ -114,7 +118,8 @@
 
 > 歌单的创立需要用户自行选择歌曲加入歌单，此时将弹出一个窗口，供用户从”本地音乐“中选取一个或多个歌曲进入对应的歌单
 
-![MusicListDialog类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicListDialog%E7%B1%BB.png)![MusicListDialog类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListDialog.jpg)
+![MusicListDialog类示意图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/MusicListDialog%E7%B1%BB.png)
+![MusicListDialog类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_MusicListDialog.jpg)
 
 ![对话框的图](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/%E5%AF%B9%E8%AF%9D%E6%A1%86-%E7%B1%BB%E8%AE%BE%E8%AE%A1.jpg)
 
@@ -124,7 +129,7 @@
 
 > 用来专门显示歌词的窗口，嵌入至主页面中，点击”下一曲“旁边标注有”词“的按钮即可召唤此窗口，建立在”单条歌词（LyricLine类）“的基础上
 
-![LyricWidget类示意图]()
+
 ![LyricWidget类声明](https://raw.githubusercontent.com/Sherlock-White/2020-TJ-program-MusicPlayer/main/res_readme/code_LyricWidgetClass.jpg)
 
 
@@ -133,12 +138,6 @@
 ##### **2.2.6 MainWidget  类（主窗口）**
 
 > 负责整个播放器各模块的协调与关联，以及承接主页面上各种按钮对应的信号槽，以此实现对应的功能
-
-
-
-```cpp
-
-```
 
 
 
