@@ -43,7 +43,7 @@ bool LyricWidget::process(QString filePath){
         int lastPos;
         QList<int> timeLabels;
         while(1){
-            timeLabels<<(rx.cap(1).toInt()*60+static_cast<int>(rx.cap(2).toDouble())*1000);
+            timeLabels<<(rx.cap(1).toInt()*60+rx.cap(2).toDouble())*1000;
             lastPos=pos+rx.matchedLength();
             pos=rx.indexIn(content,lastPos);
             if(pos==-1){

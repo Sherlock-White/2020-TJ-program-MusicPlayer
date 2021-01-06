@@ -644,16 +644,22 @@ color:rgba(0,0,0,100);
   <widget class="QSlider" name="volumeSlider">
    <property name="geometry">
     <rect>
-     <x>1110</x>
+     <x>1140</x>
      <y>550</y>
-     <width>35</width>
+     <width>30</width>
      <height>170</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>35</width>
+     <width>30</width>
      <height>170</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>30</width>
+     <height>16777215</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -702,7 +708,7 @@ color:rgba(0,0,0,100);
   <widget class="QPushButton" name="btnVolume">
    <property name="geometry">
     <rect>
-     <x>1110</x>
+     <x>1140</x>
      <y>730</y>
      <width>36</width>
      <height>35</height>
@@ -809,7 +815,7 @@ color:rgb(255, 255, 255);
     <rect>
      <x>320</x>
      <y>120</y>
-     <width>831</width>
+     <width>811</width>
      <height>531</height>
     </rect>
    </property>
@@ -823,7 +829,7 @@ color:rgb(255, 255, 255);
     <number>5</number>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page_0">
     <widget class="MusicListWidget" name="playListWidget">
@@ -950,7 +956,7 @@ background-color: rgba(255, 255, 255, 50);
       <rect>
        <x>0</x>
        <y>40</y>
-       <width>831</width>
+       <width>811</width>
        <height>491</height>
       </rect>
      </property>
