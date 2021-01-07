@@ -176,7 +176,7 @@ void MainWidget::init_actions()
     menu_changeSkin->addAction(action_backgroud_to_default);
     menu_changeSkin->addAction(action_backgroud_setting);
 }
-
+//???????????????????????????
 void MainWidget::init_sqlite()
 {
     QSqlDatabase database;
@@ -219,7 +219,7 @@ void MainWidget::init_sqlite()
         }        
     }
 }
-
+//???????????????????????????
 void MainWidget::init_musicList()
 {
     //本地音乐 初始化
@@ -248,7 +248,7 @@ void MainWidget::init_musicList()
     }
     namelist_refresh();
 }
-
+//????????????????????????????
 void MainWidget::namelist_refresh()
 {
     //先清空
@@ -328,7 +328,8 @@ void MainWidget::playlist_removeMusic()
         //移除后恢复
         playlist->setCurrentIndex(playing_pos);
         player->setPosition(position_backup);
-        ui->positionSlider->setValue(position_backup);
+        int position_backup2=static_cast<int>(position_backup);
+        ui->positionSlider->setValue(position_backup2);
         if(state==QMediaPlayer::PlayingState){
             player->play();
         }else if(state==QMediaPlayer::PlayingState){
@@ -348,14 +349,12 @@ void MainWidget::play_to_favor()
     ui->favorMusicWidget->musicList.addMusic(ui->playListWidget->musicList.getMusic(pos));
     ui->favorMusicWidget->refresh();
 }
-
 void MainWidget::local_to_favor()
 {
     int pos=ui->localMusicWidget->currentRow();
     ui->favorMusicWidget->musicList.addMusic(ui->localMusicWidget->musicList.getMusic(pos));
     ui->favorMusicWidget->refresh();
 }
-
 void MainWidget::local_to_playlist()
 {
     int pos=ui->localMusicWidget->currentRow();
@@ -365,7 +364,6 @@ void MainWidget::local_to_playlist()
     //添加到播放器
     playlist->addMedia(tempMusic.getUrl());
 }
-
 void MainWidget::favor_to_playlist()
 {
     int pos=ui->favorMusicWidget->currentRow();
@@ -405,7 +403,6 @@ void MainWidget::musiclist_removeMusic()
     musiclist[index].removeMusic(pos);
     musicListWidget_refresh();
 }
-
 void MainWidget::musiclist_to_favor()
 {
     int pos=ui->musicListWidget->currentRow();
@@ -414,7 +411,6 @@ void MainWidget::musiclist_to_favor()
     ui->favorMusicWidget->musicList.addMusic(musiclist[index].getMusic(pos));
     ui->favorMusicWidget->refresh();
 }
-
 void MainWidget::musiclist_to_playlist()
 {
     int pos=ui->musicListWidget->currentRow();
@@ -435,7 +431,6 @@ void MainWidget::background_to_default()
                           "border-radius:10px;"
                           "border-image: url(%1);}").arg(fileName));
 }
-
 void MainWidget::background_setting()
 {
     //从默认图片位置打开文件选择框
@@ -454,8 +449,6 @@ void MainWidget::background_setting()
     }
 }
 
-
-
 void MainWidget::on_localMusicWidget_customContextMenuRequested(const QPoint &pos)
 {
     if(ui->localMusicWidget->itemAt(pos)==Q_NULLPTR)
@@ -464,7 +457,6 @@ void MainWidget::on_localMusicWidget_customContextMenuRequested(const QPoint &po
     }
     menu_locallist->exec(QCursor::pos());
 }
-
 void MainWidget::on_favorMusicWidget_customContextMenuRequested(const QPoint &pos)
 {
     if(ui->favorMusicWidget->itemAt(pos)==Q_NULLPTR)
@@ -473,7 +465,6 @@ void MainWidget::on_favorMusicWidget_customContextMenuRequested(const QPoint &po
     }
     menu_favorlist->exec(QCursor::pos());
 }
-
 void MainWidget::on_nameListWidget_customContextMenuRequested(const QPoint &pos)
 {
     if(ui->nameListWidget->itemAt(pos)==Q_NULLPTR)
@@ -638,7 +629,7 @@ void MainWidget::init_systemTrayIcon()
     mySystemTray->setContextMenu(pContextMenu);
     mySystemTray->show();
 }
-
+//---------------------------------------------------------------
 void MainWidget::mousePressEvent(QMouseEvent *event)
 {
     //实现点击界面中某点，音量条隐藏
@@ -656,7 +647,6 @@ void MainWidget::mousePressEvent(QMouseEvent *event)
     offset = event->globalPos() - pos();
     event->accept();
 }
-
 void MainWidget::mouseMoveEvent(QMouseEvent *event)
 {
     int x=event->pos().x();
@@ -668,14 +658,13 @@ void MainWidget::mouseMoveEvent(QMouseEvent *event)
         setCursor(Qt::ClosedHandCursor);
     }
 }
-
 void MainWidget::mouseReleaseEvent(QMouseEvent *event)
 {
     offset = QPoint();
     event->accept();
     setCursor(Qt::ArrowCursor);
 }
-
+//--------------------------------------------------------------
 void MainWidget::closeEvent(QCloseEvent *event)
 {
     //最小化到托盘
@@ -685,12 +674,10 @@ void MainWidget::closeEvent(QCloseEvent *event)
     hide();
     event->ignore();
 }
-
 void MainWidget::dragEnterEvent(QDragEnterEvent *event)
 {
     event->acceptProposedAction();
 }
-
 void MainWidget::dropEvent(QDropEvent *event)
 {
     QList<QUrl> urls = event->mimeData()->urls();
@@ -699,11 +686,12 @@ void MainWidget::dropEvent(QDropEvent *event)
     ui->stackedWidget->setCurrentIndex(1);//切换到本地音乐
     
 }
+
 void MainWidget::on_btnQuit_clicked()
 {
     close();
 }
-
+//-----------------------------------------------
 void MainWidget::on_btnPlay_clicked()
 {
     if(player->state()==QMediaPlayer::PlayingState)
@@ -721,17 +709,14 @@ void MainWidget::on_btnPlay_clicked()
         player->play();
     }
 }
-
 void MainWidget::on_btnNext_clicked()
 {
     playlist->next();
 }
-
 void MainWidget::on_btnPre_clicked()
 {
     playlist->previous();
 }
-
 void MainWidget::on_btnPlayMode_clicked()
 {
     if(playlist->playbackMode()==QMediaPlaylist::Loop){
@@ -756,7 +741,7 @@ void MainWidget::on_btnPlayMode_clicked()
         playlist->setPlaybackMode(QMediaPlaylist::Loop);
     }
 }
-
+//-----------------------------------------------
 void MainWidget::on_btnMin_clicked()
 {
     showMinimized();//窗口最小化
@@ -768,7 +753,8 @@ void MainWidget::on_btnAdd_clicked()
     fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
     fileDialog.setFileMode(QFileDialog::ExistingFiles);
     fileDialog.setWindowTitle(tr("添加本地音乐（注：自动过滤，按下\"Ctrl+A\"全选添加即可；不支持添加文件夹）"));
-    QStringList list;list<<"application/octet-stream";
+    QStringList list;
+    list<<"application/octet-stream";
     fileDialog.setMimeTypeFilters(list);
     fileDialog.setDirectory(QStandardPaths::standardLocations(QStandardPaths::MusicLocation).value(0, QDir::homePath()));
     if (fileDialog.exec() == QDialog::Accepted){
@@ -778,7 +764,6 @@ void MainWidget::on_btnAdd_clicked()
        ui->stackedWidget->setCurrentIndex(1);//切换到本地音乐
     }
 }
-
 
 void MainWidget::on_btnVolume_clicked()
 {
@@ -806,7 +791,7 @@ void MainWidget::on_btnAddMusicList_clicked()
     }
 }
 
-
+//-------------------------------------------------
 void MainWidget::on_btnCurMusic_clicked()
 {
     //切换到“当前播放”界面
@@ -822,7 +807,7 @@ void MainWidget::on_btnFavorMusic_clicked()
     //切换到“我喜欢”界面
     ui->stackedWidget->setCurrentIndex(2);
 }
-
+//---------------------------------------------------
 void MainWidget::on_playListWidget_doubleClicked(const QModelIndex &index)
 {
     int i=index.row();
@@ -849,14 +834,13 @@ void MainWidget::on_favorMusicWidget_doubleClicked(const QModelIndex &index)
     player->play();
     ui->stackedWidget->setCurrentIndex(0);//跳转到当前播放列表
 }
-
 void MainWidget::on_nameListWidget_doubleClicked(const QModelIndex &index)
 {
     ui->stackedWidget->setCurrentIndex(3);//跳转到歌单内容列表
     musiclist_index=index.row();
     musicListWidget_refresh();
 }
-
+//--------------------------------------------------------------------------------
 void MainWidget::on_btnSkin_clicked()
 {
     menu_changeSkin->exec(QCursor::pos());
@@ -919,7 +903,7 @@ void MainWidget::on_btnAddtoFavor_clicked()
     }
     delete []results;
 }
-
+//------------------------------------------------------
 void MainWidget::on_btnSortSinger_clicked()
 {
     ui->localMusicWidget->musicList.sort_by(AUTHOR);
@@ -935,7 +919,6 @@ void MainWidget::on_btnSortDuration_clicked()
     ui->localMusicWidget->musicList.sort_by(DURATION);
     ui->localMusicWidget->refresh();
 }
-
 void MainWidget::on_btnSortSinger_2_clicked()
 {
     ui->favorMusicWidget->musicList.sort_by(AUTHOR);
@@ -951,7 +934,6 @@ void MainWidget::on_btnSortDuration_2_clicked()
     ui->favorMusicWidget->musicList.sort_by(DURATION);
     ui->favorMusicWidget->refresh();
 }
-
 void MainWidget::on_btnSortSinger_4_clicked()
 {
     unsigned int index;
@@ -973,7 +955,7 @@ void MainWidget::on_btnSortDuration_4_clicked()
     musiclist[index].sort_by(DURATION);
     musicListWidget_refresh();
 }
-
+//-------------------------------------------------------
 void MainWidget::on_btnNeaten_clicked()
 {
     ui->localMusicWidget->musicList.neaten();
@@ -991,17 +973,17 @@ void MainWidget::on_btnNeaten_3_clicked()
     musiclist[index].neaten();
     musicListWidget_refresh();
 }
-
+//----------------------------------------------------
 void MainWidget::on_btnTitle_clicked()
 {
     on_btnAbout_clicked();
 }
-
+//----------------------------------------------------
 void MainWidget::on_btnLyric_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4);
 }
-
+//------------------------------------------------------
 void MainWidget::on_btnClear_clicked()
 {
     QMessageBox::StandardButton btn;
@@ -1012,7 +994,6 @@ void MainWidget::on_btnClear_clicked()
         playlist->clear();
     }
 }
-
 void MainWidget::on_btnClear_2_clicked()
 {
     QMessageBox::StandardButton btn;
@@ -1022,7 +1003,6 @@ void MainWidget::on_btnClear_2_clicked()
         ui->localMusicWidget->refresh();
     }
 }
-
 void MainWidget::on_btnClear_3_clicked()
 {
     QMessageBox::StandardButton btn;
@@ -1032,7 +1012,6 @@ void MainWidget::on_btnClear_3_clicked()
         ui->favorMusicWidget->refresh();
     }
 }
-
 void MainWidget::on_btnClear_4_clicked()
 {
     QMessageBox::StandardButton btn;
@@ -1044,7 +1023,7 @@ void MainWidget::on_btnClear_4_clicked()
         musicListWidget_refresh();
     }
 }
-
+//-----------------------------------------------------
 void MainWidget::on_btnAbout_clicked()
 {
     QMessageBox::about(this,u8"关于","MusicPlayer | 一款轻量级的本地音乐播放器\n"

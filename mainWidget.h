@@ -9,6 +9,8 @@
 #include "MusicList.h"
 #include "LyricWidget.h"
 #include <QCloseEvent>
+#include "LoginWidget.h"
+#include "BriefModeWidget.h"
 
 
 namespace Ui {
