@@ -24,10 +24,15 @@ class MainWidget : public QWidget
 public:
     explicit MainWidget(QWidget *parent = nullptr);
     ~MainWidget() override;
+
+    bool getBriefFlag();
     
 private:
+
     Ui::Widget *ui;
     void paintEvent(QPaintEvent *event) override;
+
+    bool briefFlag;
     
     //UI组件额外的一些处理
     void init_UI();

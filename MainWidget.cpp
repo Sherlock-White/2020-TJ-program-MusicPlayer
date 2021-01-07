@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include "MusicListDialog.h"
+#include <QDebug>
 
 MainWidget::MainWidget(QWidget *parent) :
     QWidget(parent),
@@ -38,6 +39,10 @@ MainWidget::MainWidget(QWidget *parent) :
     
     //系统托盘初始化
     init_systemTrayIcon();
+
+    //简介模式初始化
+    briefFlag=false;
+
 }
 
 MainWidget::~MainWidget()
@@ -51,6 +56,11 @@ void MainWidget::paintEvent(QPaintEvent *event){
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
     QWidget::paintEvent(event);
+}
+
+bool MainWidget::getBriefFlag()
+{
+    return briefFlag;
 }
 
 void MainWidget::init_UI()
@@ -177,6 +187,7 @@ void MainWidget::init_actions()
     menu_changeSkin->addAction(action_backgroud_setting);
 }
 //???????????????????????????
+
 void MainWidget::init_sqlite()
 {
     QSqlDatabase database;
@@ -586,8 +597,10 @@ void MainWidget::systemTrayIcon_activated(QSystemTrayIcon::ActivationReason reas
     case QSystemTrayIcon::DoubleClick:
         //显/隐主界面
         if(isHidden()){
+            briefFlag=false;
             show();
         }else{
+            briefFlag=true;
             hide();
         }
         break;
@@ -690,6 +703,7 @@ void MainWidget::dropEvent(QDropEvent *event)
 void MainWidget::on_btnQuit_clicked()
 {
     close();
+    briefFlag=true;
 }
 //-----------------------------------------------
 void MainWidget::on_btnPlay_clicked()
@@ -744,7 +758,8 @@ void MainWidget::on_btnPlayMode_clicked()
 //-----------------------------------------------
 void MainWidget::on_btnMin_clicked()
 {
-    showMinimized();//窗口最小化
+    close();
+    briefFlag=true;
 }
 
 void MainWidget::on_btnAdd_clicked()
