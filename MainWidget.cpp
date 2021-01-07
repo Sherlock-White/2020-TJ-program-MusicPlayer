@@ -42,6 +42,7 @@ MainWidget::MainWidget(QWidget *parent) :
 
     //简介模式初始化
     briefFlag=false;
+    briefWidget=new BriefModeWidget(this);
 
 }
 
@@ -702,7 +703,7 @@ void MainWidget::dropEvent(QDropEvent *event)
 
 void MainWidget::on_btnQuit_clicked()
 {
-    close();
+    hide();
     briefFlag=true;
 }
 //-----------------------------------------------
@@ -758,8 +759,17 @@ void MainWidget::on_btnPlayMode_clicked()
 //-----------------------------------------------
 void MainWidget::on_btnMin_clicked()
 {
-    close();
+    hide();
     briefFlag=true;
+    briefWidget->show();
+
+    //Music->setPlaylist(music->playlist(),music->playlist()->currentIndex(),music->position(),music->volume(),music->state(),playlist->playbackMode(),i);
+    /*player->pause();
+    if(Music->exec()==Dialog::Accepted)
+    {
+      ListFocus();
+      show();
+    }*/
 }
 
 void MainWidget::on_btnAdd_clicked()

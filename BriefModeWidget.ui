@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>BriefModeWidget</class>
  <widget class="QWidget" name="BriefModeWidget">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -24,6 +27,9 @@
   </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
   </property>
   <property name="contextMenuPolicy">
    <enum>Qt::DefaultContextMenu</enum>

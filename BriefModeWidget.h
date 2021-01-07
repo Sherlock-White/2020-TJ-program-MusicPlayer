@@ -20,14 +20,13 @@ public:
 protected:
     void paintEvent(QPaintEvent *event)override;
 
-    /*重写Widget的一些方法*/
     //实现窗口可拖动
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
 
 private:
-    friend class MainWidget;
+    //friend class MainWidget;
 
     Ui::BriefModeWidget *ui;
 

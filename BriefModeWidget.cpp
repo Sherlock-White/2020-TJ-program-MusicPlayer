@@ -27,10 +27,10 @@ void BriefModeWidget::init_UI(){
 void BriefModeWidget::init_play()
 {
     //播放器初始化
-    player= new QMediaPlayer(this);
+    /*player= new QMediaPlayer(this);
     playlist=new QMediaPlaylist;
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
-    player->setPlaylist(playlist);
+    player->setPlaylist(playlist);*/
 
 }
 
@@ -76,7 +76,7 @@ void BriefModeWidget::mouseReleaseEvent(QMouseEvent *event)
 //--------------------------------------------------------
 void BriefModeWidget::on_btnPre_clicked()
 {
-    playlist->previous();
+
 }
 
 void BriefModeWidget::on_btnPlay_clicked()
@@ -86,7 +86,7 @@ void BriefModeWidget::on_btnPlay_clicked()
 
 void BriefModeWidget::on_btnNext_clicked()
 {
-    playlist->next();
+
 }
 
 void BriefModeWidget::on_btnLike_clicked()

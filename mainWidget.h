@@ -33,6 +33,8 @@ private:
     void paintEvent(QPaintEvent *event) override;
 
     bool briefFlag;
+    BriefModeWidget* briefWidget;
+    void init_briefWidget();
     
     //UI组件额外的一些处理
     void init_UI();
